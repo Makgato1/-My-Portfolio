@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Marupeng Precious Makgato</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: #0a0a23;
+      position: fixed;
+      top: 0;
+      width: 95%;
+      z-index: 1000;
+    }
+    .logo span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #facc15;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav ul li a:hover, nav ul li a.active {
+      color: #60a5fa;
+    }
+
+    /* MAIN SECTION */
+    section {
+      max-width: 1200px;
+      margin: 7rem auto 3rem;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #0a0a23;
+      margin-bottom: 1rem;
+    }
+    section p.note {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      color: #374151;
+    }
+
+    /* PROJECT CARDS GRID */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Responsive: 2 columns on tablets */
+    @media (max-width:900px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Responsive: 1 column on small screens */
+    @media (max-width:500px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+      nav { flex-direction: column; gap: 0.5rem; }
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 0.8rem;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #e2e8f0;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.6rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .card:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #0a0a23;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #1f2937;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+    .card .tech {
+      font-size: 0.85rem;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    .view-btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.5rem 1rem;
+      background-color: #60a5fa;
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .view-btn:hover {
+      background-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #f3f3f7;
+      background: #0a0a23;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo"><span>Portfolio</span></div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN SECTION -->
+  <section>
+    <h1>My Projects</h1>
+    <p class="note"><strong>Note:</strong> These projects were developed as part of my academic coursework at Vaal University. They demonstrate my technical skills but were not commercially deployed.</p>
+
+    <div class="projects">
+      <div class="card">
+        <img src="../assets/images/book.jpg" alt="Book-Review Website" class="project-img">
+        <h3>Book-Review Hub</h3>
+        <p>An interactive website where users can add, rate, and review books. Users can search by genre or author, and leave feedback for each book.</p>
+        <p class="tech">Technologies: HTML, CSS, JavaScript, PHP, MySQL</p>
+        <a href="https://makgato1.github.io/Book-Review-Hub/" target="_blank" class="view-btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/salon.jpeg" alt="Salon Booking App" class="project-img">
+        <h3>Salon Booking App</h3>
+        <p>A web application allowing clients to book salon appointments online. Includes real-time availability checks, appointment reminders, and admin dashboard.</p>
+        <p class="tech">Technologies: HTML, CSS, JavaScript</p>
+        <a href=" https://makgato1.github.io/-Booking-App/" target="_blank" class="view-btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/retailAI.jpg" alt="RetailCast AI" class="project-img">
+        <h3>RetailCast AI</h3>
+        <p>AI-powered analytics tool for retail businesses. Predicts sales trends, identifies top-selling products, and provides inventory recommendations.</p>
+        <p class="tech">Technologies: Python, Machine Learning, Pandas, NumPy, Matplotlib</p>
+       
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/quiz.webp" alt="Online Quiz" class="project-img">
+        <h3>Quiz App</h3>
+        <p>Allows educators to create quizzes and students to attempt them online. Includes automatic grading, performance reports, and a question bank.</p>
+        <p class="tech">Technologies: HTML, CSS, JavaScript, PHP, MySQL</p>
+        <a href="https://makgato1.github.io/quiz/" target="_blank" class="view-btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/calculator.png" alt="JavaScript Calculator" class="project-img">
+        <h3>JavaScript Calculator</h3>
+        <p>An interactive calculator for performing arithmetic operations. Features include history tracking, clear functions, and responsive design for mobile devices.</p>
+        <p class="tech">Technologies: HTML, CSS, JavaScript</p>
+        <a href="https://makgato1.github.io/Calculator/" target="_blank" class="view-btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/student.webp" alt="Student Accommodation AI" class="project-img">
+        <h3>Student Accommodation AI</h3>
+        <p>A system that helps students find suitable accommodation. Uses AI to recommend options based on location, price, and preferences.</p>
+        <p class="tech">Technologies: Python, Django, HTML, CSS, JavaScript, Machine Learning</p>
+       
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Makgato Marupeng | Projects</footer>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Marupeng Precious Makgato</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #0a0a23;
+}
+.logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #facc15;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: #60a5fa;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #0a0a23;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.info-box {
+  margin-top: 1.5rem;
+  background: #f4f4f4;
+  border-left: 4px solid #0a0a23;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+.info-box p {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+}
+.about-text {
+  flex: 1 1 500px;
+}
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0a0a23;
+}
+.about-text h2 {
+  margin-bottom: 1rem;
+  color: #0a0a23;
+}
+.lang-letter {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.box-list {
+  display: flex;          /* Make boxes horizontal */
+  gap: 1.5rem;            /* Gap between boxes */
+  flex-wrap: wrap;         /* Wrap if screen is small */
+}
+.box-item {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 120px;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.box-item:hover {
+  background: #1e3a8a;
+  color: #fff;
+  transform: translateY(-5px);
+}
+.box-item i, .box-item span {
+  display: block;
+}
+.box-item span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ICON SECTIONS */
+.info-block {
+  margin-bottom: 2.5rem;
+}
+.info-block h2 {
+  color: #0a0a23;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+/* TECHNICAL SKILLS */
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: flex-start;
+}
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  text-align: center;
+}
+.icon-item i {
+  font-size: 4rem;
+  color: #021342;
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+}
+.icon-item i:hover {
+  color: #021742;
+  transform: scale(1.1);
+}
+.icon-item span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:2rem;
+  color:#f3f3f7;
+  background:#0a0a23;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-container { flex-direction: column; align-items: center; }
+  .box-list { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="navbar">
+  <div class="logo"><span>Portfolio</span></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main class="about-section">
+  <div class="about-container">
+    <!-- IMAGE + INFO -->
+    <div class="about-image">
+      <img src="../assets/images/picture.jpg" alt="Makgato Marupeng">
+      <div class="info-box">
+        <p><i class="fas fa-envelope"></i> maropengprecious@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +27 79 581 9702</p>
+        <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+        <p><i class="fas fa-school"></i> Vaal University of Technology</p>
+      </div>
+    </div>
+
+    <!-- ABOUT TEXT -->
+    <div class="about-text">
+      <h1>About Me</h1>
+      <h2>Hi! I'm <strong>Marupeng Precious</strong></h2>
+      <p>Final-semester IT student at Vaal University of Technology, passionate about building innovative software solutions. As a skilled full-stack developer, I have hands-on experience developing web applications using modern technologies like Python, Django, JavaScript, Java, PHP, AI, and Machine Learning. I enjoy turning ideas into functional, user-friendly systems.</p>
+
+      <p>I'm driven to solve complex technical problems using logical thinking and analytical skills. Whether working independently or in a team, I bring strong problem-solving skills, attention to detail, and a commitment to delivering high-quality solutions.</p>
+
+      <div class="info-block">
+        <h2>Technical Skills</h2>
+        <div class="icon-list">
+          <div class="icon-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+          <div class="icon-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="icon-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <div class="icon-item"><i class="fab fa-php"></i><span>PHP</span></div>
+          <div class="icon-item"><i class="fab fa-python"></i><span>Python</span></div>
+          <div class="icon-item"><i class="fab fa-java"></i><span>Java</span></div>
+          <div class="icon-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+          <div class="icon-item"><i class="fas fa-network-wired"></i><span>Networking</span></div>
+          <div class="icon-item"><i class="fas fa-project-diagram"></i><span>Packet Tracer</span></div>
+          <div class="icon-item"><i class="fas fa-code"></i><span>VS Code</span></div>
+          <div class="icon-item"><i class="fas fa-file-code"></i><span>Notepad++</span></div>
+          <div class="icon-item"><i class="fas fa-robot"></i><span>AI</span></div>
+          <div class="icon-item"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h2>Languages I Speak</h2>
+        <div class="box-list">
+          <div class="box-item"><span class="lang-letter">GB</span><span>English</span></div>
+          <div class="box-item"><span class="lang-letter">ZA</span><span>Zulu</span></div>
+          <div class="box-item"><span class="lang-letter">SE</span><span>Sepedi</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 Makgato Marupeng | About</footer>
+
+</body>
+</html>

@@ -6,15 +6,16 @@
   <title>Marupeng Precious Makgato | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- === NAVIGATION === -->
+
   <header>
     <nav class="navbar">
       <div class="logo"><span>Portfolio</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="nav-list">
+        <li><a href="index.html">Home</a></li>
         <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/projects.html">Projects</a></li>
         <li><a href="pages/education.html">Education</a></li>
@@ -23,33 +24,20 @@
     </nav>
   </header>
 
-  <!-- === HERO SECTION === -->
-  <section id="home" class="hero">
-    <div class="yellow-box"></div>
-
+  <section class="hero" style="height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 2rem;">
     <div class="home-box">
       <h1>Marupeng Precious Makgato</h1>
-      <h2>I'M A 
-        <span class="animated-words">
-          <span>CODER</span>
-          <span>DEVELOPER</span>
-          <span>PROGRAMMER</span>
-          <span>DESIGNER</span>
-          <span>FREELANCER</span>
-        </span>
-      </h2>
+      <h2 style="font-size:1.5rem; margin:1rem 0;">I'M A <span id="spin-word" style="color:var(--blue-bright); transition: opacity 0.3s;">CODER</span></h2>
       <h3>IT Student at Vaal University of Technology</h3>
-      <h4>Building digital solutions for real problems with clean, efficient code and user-focused design.</h4>
-      <a href="pages/projects.html" class="btn">View My Work</a>
+      <p style="max-width:600px; margin:1.5rem auto; color:var(--text-muted);">Building digital solutions for real problems with clean, efficient code.</p>
+      <a href="pages/projects.html" class="btn" style="display:inline-block; padding:1rem 2rem; background:var(--primary); color:white; text-decoration:none; border-radius:50px; font-weight:700;">View My Work</a>
     </div>
   </section>
 
-  <!-- === FOOTER === -->
   <footer>
     <p>© 2025 Makgato Marupeng | All Rights Reserved</p>
   </footer>
 
-  <!-- === JS FILE === -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>

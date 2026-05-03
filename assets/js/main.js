@@ -1,34 +1,41 @@
-// Active link highlight
-const sections = document.querySelectorAll("section, .hero");
-const navLinks = document.querySelectorAll(".nav-links a");
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. MOBILE MENU TOGGLE ---
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id") || "home";
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
     }
-  });
 
-  navLinks.forEach(a => {
-    a.classList.remove("active");
-    if (a.getAttribute("href").includes(current)) {
-      a.classList.add("active");
+    // --- 2. HOME PAGE: WORD SWITCHER ---
+    const wordElement = document.getElementById('spin-word');
+    if (wordElement) {
+        const words = ["CODER", "DEVELOPER", "PROGRAMMER", "DESIGNER", "FREELANCER"];
+        let i = 0;
+        setInterval(() => {
+            i = (i + 1) % words.length;
+            wordElement.style.opacity = 0;
+            setTimeout(() => {
+                wordElement.textContent = words[i];
+                wordElement.style.opacity = 1;
+            }, 300);
+        }, 2000);
     }
-  });
+
+    // --- 3. ACTIVE LINK HIGHLIGHTER ---
+    const currentLocation = location.href;
+    const menuItems = document.querySelectorAll('.nav-links a');
+    menuItems.forEach(item => {
+        if(item.href === currentLocation){
+            item.className = "active";
+        }
+    });
 });
-
-// Back-to-top button
-const backBtn = document.createElement("button");
-backBtn.id = "backToTop";
-backBtn.textContent = "↑";
-document.body.appendChild(backBtn);
-backBtn.style.cssText = `
-  position: fixed; bottom:1rem; right:1rem;
-  padding:0.8rem; border-radius:50%; border:none;
-  background:#1e40af; color:white; font-weight:bold;
-  cursor:pointer; display:none; z-index:999;
-`;
-window.addEventListener("scroll", () => backBtn.style.display = window.scrollY>300?"block":"none");
-backBtn.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));

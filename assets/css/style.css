@@ -538,4 +538,109 @@ footer { text-align: center; padding: 2rem; background: var(--primary); color: w
   .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
   .timeline-item::after { left: 21px; right: auto; }
   .timeline-item-right { left: 0%; }
+}/* Container for the projects */
+.projects-section {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* THE GRID SYSTEM */
+.project-grid {
+    display: grid;
+    /* This creates a responsive grid: 3 columns on desktop, 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between the cards */
+    padding: 20px 0;
+}
+
+/* THE INDIVIDUAL CARD */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures cards are same height */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image stretching */
+}
+
+/* Card Content Styling */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+.card-body h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.tech-stack {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #007bff; /* Highlights tech used */
+    margin: 15px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* The View Button */
+.view-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: auto; /* Aligns button to bottom of card */
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #555;
+}
+
+/* Academic Note Box Styling */
+.note-box {
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+.card {
+    position: relative; /* Needed for the tag positioning */
+}
+
+.project-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #28a745; /* Green color for 'New' or 'Popular' */
+    color: white;
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

@@ -2,9 +2,9 @@
 :root {
   --primary: #0a0a23;
   --accent: #facc15;
-  --bg-dark: #020c2c;
+  --bg-dark: #022cb6;
   --blue-bright: #60a5fa;
-  --blue-deep: #1e3a8a;
+  --blue-deep: #001a61;
   --white: #ffffff;
   --gray-light: #f8fafc;
   --text-muted: #4b5563;
@@ -60,7 +60,7 @@ header {
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: var(--blue-bright);
+  color: var(--accent);
 }
 
 .menu-toggle {
@@ -448,7 +448,7 @@ header {
 .logo span { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a { text-decoration: none; color: white; font-weight: 600; transition: 0.3s; }
-.nav-links a:hover, .nav-links a.active { color: var(--blue-bright); }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
 /* --- EDUCATION TIMELINE (Zig-Zag) --- */
@@ -469,7 +469,7 @@ header {
   content: '';
   position: absolute;
   width: 4px;
-  background-color: var(--gray-light);
+  background-color: var(--primary);
   top: 0; bottom: 0;
   left: 50%;
   margin-left: -2px;
@@ -645,15 +645,45 @@ footer { text-align: center; padding: 2rem; background: var(--primary); color: w
     letter-spacing: 1px;
 }
 .hero {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
-  padding: 8rem 2rem 4rem;
+  text-align: left;
+  padding: 8rem max(2rem, 8vw) 4rem;
   background: linear-gradient(135deg, rgba(10, 10, 35, 0.96), rgba(30, 58, 138, 0.9));
   color: var(--white);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  right: 8%;
+  width: min(42vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: url("../images/picture.jpg") center / cover no-repeat;
+  -webkit-mask-image: radial-gradient(circle, #000 42%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
+  mask-image: radial-gradient(circle, #000 42%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
+  animation: hero-image-fade 1.2s ease-out both;
+}
+
+@keyframes hero-image-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero > * {
+  max-width: 52%;
 }
 
 .eyebrow {
@@ -674,14 +704,14 @@ footer { text-align: center; padding: 2rem; background: var(--primary); color: w
   line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--white);
-  max-width: 900px;
+  max-width: 700px;
 }
 
 .hero h2 {
   font-size: clamp(1.1rem, 2vw, 1.8rem);
   margin-bottom: 1rem;
   color: #e2e8f0;
-  max-width: 800px;
+  max-width: 650px;
 }
 
 .hero h3 {
@@ -692,14 +722,14 @@ footer { text-align: center; padding: 2rem; background: var(--primary); color: w
 
 .hero p {
   max-width: 680px;
-  margin: 1.2rem auto 0;
+  margin: 1.2rem 0 0;
   color: #dbeafe;
   font-size: 1.05rem;
 }
 
 .hero-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
@@ -732,4 +762,33 @@ footer { text-align: center; padding: 2rem; background: var(--primary); color: w
 
 .secondary-btn:hover {
   background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .hero::before {
+    top: auto;
+    right: 50%;
+    bottom: 2rem;
+    width: min(78vw, 380px);
+    transform: translateX(50%);
+    background-position: center;
+    -webkit-mask-image: radial-gradient(circle, #000 42%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
+    mask-image: radial-gradient(circle, #000 42%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
+  }
+
+  .hero > * {
+    max-width: 100%;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero h3,
+  .hero p {
+    text-align: left;
+  }
 }

@@ -6,21 +6,23 @@
   <title>About | Marupeng Precious Makgato</title>
   
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <header>
-    <nav class="navbar">
-      <div class="logo"><span>Portfolio</span></div>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo home-logo" href="../index.html" aria-label="Marupeng Makgato home"><span class="logo-mark">MPM</span><span class="logo-name">Marupeng Makgato<small>SOFTWARE DEVELOPER</small></span></a>
+      <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-list"><i class="fas fa-bars" aria-hidden="true"></i></button>
       <ul class="nav-links" id="nav-list">
         <li><a href="../index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="education.html">Education</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-contact">Let’s talk <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +33,7 @@
       <aside class="about-image">
         <img src="../assets/images/picture.jpg" alt="Marupeng Precious Makgato">
         <div class="info-box">
-          <p><i class="fas fa-envelope"></i> maropengprecious@gmail.com</p>
+          <p><i class="fas fa-envelope"></i> <span>maropengprecious<wbr>@gmail.com</span></p>
           <p><i class="fas fa-phone"></i> +27 79 581 9702</p>
           <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
           <p><i class="fas fa-school"></i> Vaal University of Tech</p>
@@ -49,6 +51,32 @@
             I enjoy transforming ideas into functional, user-friendly systems that deliver real value. 
             I am driven by a strong ability to think logically and solve complex technical challenges. Whether working independently or as part of a team, 
             I bring a high level of attention to detail, problem-solving skills, and a commitment to delivering quality and efficient solutions.</p>
+
+        <section class="info-block about-skills" id="skills" aria-labelledby="about-skills-title">
+          <h2 id="about-skills-title">Skills by focus</h2>
+          <div class="about-skill-grid">
+            <article class="about-skill-card">
+              <span class="about-skill-icon"><i class="fas fa-window-maximize" aria-hidden="true"></i></span>
+              <h3>Frontend</h3>
+              <p>HTML5 · CSS3 · JavaScript</p>
+            </article>
+            <article class="about-skill-card">
+              <span class="about-skill-icon"><i class="fas fa-terminal" aria-hidden="true"></i></span>
+              <h3>Backend</h3>
+              <p>Python · PHP · Java</p>
+            </article>
+            <article class="about-skill-card">
+              <span class="about-skill-icon"><i class="fas fa-database" aria-hidden="true"></i></span>
+              <h3>Data &amp; AI</h3>
+              <p>MySQL · Artificial Intelligence · Machine Learning</p>
+            </article>
+            <article class="about-skill-card">
+              <span class="about-skill-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
+              <h3>Tools &amp; Platforms</h3>
+              <p>WordPress · Networking · Cisco Packet Tracer</p>
+            </article>
+          </div>
+        </section>
 
         <div class="info-block">
           <h2>Technical Skills</h2>
@@ -79,7 +107,19 @@
     </div>
   </main>
 
-  <footer>© 2026  Makgato Marupeng | All Rights Reserved</footer>
+  <section class="home-contact" aria-labelledby="contact-title">
+    <div class="section-shell contact-inner">
+      <div><p class="section-kicker">Have a role or project in mind? <span>LET’S CONNECT</span></p><h2 id="contact-title">Let’s build something<br /><em>worthwhile.</em></h2></div>
+      <div class="contact-actions"><p>I’m open to junior developer roles, internships, and thoughtful collaborations.</p><a class="btn contact-btn" href="contact.html">Start a conversation <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="contact-email" href="mailto:maropengprecious247@gmail.com">maropengprecious247<wbr>@gmail.com</a></div>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <a class="footer-brand" href="../index.html#top">MPM<span>.</span></a>
+    <p>Designed with care in Pretoria, South Africa.</p>
+    <a href="https://linkedin.com/in/marupeng-precious-makgato-6877b9379" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+    <small>© 2026 Marupeng Precious Makgato</small>
+  </footer>
 
   <script src="../assets/js/main.js"></script>
 </body>
